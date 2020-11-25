@@ -1,0 +1,34 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Creator;
+
+import AbstractProductA.*;
+import AbstractProductB.*;
+import AbstractProductC.*;
+
+/**
+ *
+ * @author MK
+ */
+public class Projektant2 extends Projektant {
+@Override
+    public EkranskaForma kreirajEkranskuFormu() 
+      { Panel pan = new Panel1(); // Promenljivo!!!
+        EkranskaForma ef = new EkranskaForma1(); // Promenljivo!!!
+        ef.setPanel(pan);
+        return ef;
+      }   
+    
+    @Override
+    public BrokerBazePodataka kreirajBrokerBazePodataka () 
+      { return new BrokerBazePodataka2(); // Promenljivo!!!
+      }  
+        
+    @Override
+    public Kontroler kreirajKontroler (EkranskaForma ef, BrokerBazePodataka bbp) 
+      { return new Kontroler1(ef,bbp); // Promenljivo!!!
+      }
+}
